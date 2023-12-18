@@ -1,11 +1,8 @@
 #include <iostream>
-#include "Addition/Addition.h"
-#include "Multiplication/Multiplication.h"
-#include "Division/Division.h"
-#include "Subtraction/Subtraction.h"
+#include "calculator.h"
 
 int main() {
-    //Calculator calc;
+    Calculator calc;
 
     double num1, num2;
     char op;
@@ -24,17 +21,16 @@ int main() {
     double result;
     switch (op) {
         case '+':
-            
-            std::cout << "Result: " << add(num1, num2) << std::endl;
+            result = calc.add(num1, num2);
             break;
         case '-':
-            result = subtract(num1, num2);
+            result = calc.subtract(num1, num2);
             break;
         case '*':
-            result = multiply(num1, num2);
+            result = calc.multiply(num1, num2);
             break;
         case '/':
-            result = divide(num1, num2);
+            result = calc.divide(num1, num2);
             break;
         
         
